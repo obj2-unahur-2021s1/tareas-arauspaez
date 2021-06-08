@@ -40,8 +40,11 @@ class TareaTest : DescribeSpec({
         it("para una TareaSimple") {
             tareaSimpleLight.nominaEmpleados().shouldContainExactlyInAnyOrder (empleadoJunior1,empleadoJunior2,teamLeader)
         }
-        it("para una TareaIntegracion"){
+        it("para una TareaIntegracion con una TareaSimple en listaTareas"){
             tareaIntegracionLight.nominaEmpleados().shouldContainExactlyInAnyOrder (empleadoJunior1,empleadoJunior2,teamLeader,teamLeaderCrack)
+        }
+        it("para una TareaIntegracion con una TareaSimple y una TareaIntegracion en listaTareas"){
+            tareaIntegracionHeavy.nominaEmpleados().shouldContainExactlyInAnyOrder (empleadoJunior1,empleadoJunior2,teamLeader,teamLeaderCrack,empleadoSenior1,empleadoSenior2,teamLeader,teamLeaderCrack)
         }
     }
 
